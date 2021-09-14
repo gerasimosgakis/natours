@@ -49,20 +49,26 @@
 //   }
 // }
 
-.row {
+.main-content {
   display: flex;
-  max-width: $grid-width;
-  justify-content: space-around;
+  justify-content: center;
 
-  &:not(:last-child) {
-    margin-bottom: $gutter-vertical;
-  }
+  .row {
+    display: flex;
+    max-width: $grid-width;
 
-  .column {
-    flex: 0 1 100%;
+    justify-content: space-between;
+
     &:not(:last-child) {
-      margin-right: $gutter-horizontal;
+      margin-bottom: $gutter-vertical;
     }
-    padding: 2rem;
+
+    .column {
+      flex: 1 1 100%;
+      &:not(:last-child) {
+        margin-right: $gutter-horizontal;
+      }
+      padding: 2rem;
+    }
   }
 }

@@ -2,4 +2,28 @@
   background-color: $color-grey-light-1;
   padding: 25rem 0;
   margin-top: -20vh;
+
+  .main-content {
+    display: flex;
+    justify-content: center;
+
+    .row {
+      display: flex;
+      max-width: $grid-width;
+
+      justify-content: space-between;
+
+      &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+      }
+
+      .column {
+        flex: 1 1 100%;
+        &:not(:last-child) {
+          margin-right: $gutter-horizontal;
+        }
+        padding: 2rem;
+      }
+    }
+  }
 }
