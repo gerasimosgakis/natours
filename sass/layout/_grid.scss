@@ -60,14 +60,27 @@
 
     justify-content: space-between;
 
+    @include respond(tab-port) {
+      flex-wrap: wrap;
+    }
+
     &:not(:last-child) {
       margin-bottom: $gutter-vertical;
+    }
+
+    @include respond(tab-port) {
+      max-width: 50rem;
+      padding: 0 3rem;
     }
 
     .column {
       flex: 1 1 100%;
 
       padding: 2rem;
+
+      @include respond(tab-port) {
+        // width: 100% !important;
+      }
     }
   }
 }
